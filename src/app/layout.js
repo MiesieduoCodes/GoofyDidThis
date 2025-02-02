@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/theme-provider";
 import Head from 'next/head';
+import { Toaster } from "@/app/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Your Name | Portfolio",
-  description: "Welcome to my portfolio showcasing my projects and skills.",
+  title: "Miesieduo Veria | Portfolio",
+  description: "The Official Portfolio for Miesieduo Veria ",
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
