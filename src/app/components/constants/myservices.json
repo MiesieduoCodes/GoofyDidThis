@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Web Development",
+      "description": "Creating dynamic and responsive websites tailored to your needs.",
+      "icon": "M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"
+    },
+    {
+      "title": "Nature Photography",
+      "description": "Capturing the beauty of the natural world through stunning imagery.",
+      "icon": "M4 4h16v16H4V4zm2 2v12h12V6H6z"
+    },
+    {
+      "title": "Game Development",
+      "description": "Crafting engaging and immersive gaming experiences for players of all ages.",
+      "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zM11 17h2v2h-2z"
+    },
+    {
+      "title": "Drumming",
+      "description": "Bringing rhythm to life through powerful and dynamic drumming performances.",
+      "icon": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zM11 17h2v2h-2z"
+    }
+  ]

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MyOffer from "@/app/components/my-offer";
 import { ModeToggle } from "@/app/components/mode-toggle";
 export default function Home() {
   return (
@@ -96,6 +97,7 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
+      <MyOffer/>
     </div>
   );
 }

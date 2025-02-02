@@ -52,7 +52,7 @@ const ContactPage = () => {
             alt="Contact Us"
             className="w-full h-full rounded-2xl object-cover"
           />
-          <h1 className="absolute top-10 left-10 text-white text-4xl font-bold">Contact Us</h1>
+          <h1 className="absolute top-10 left-10 text-white text-4xl font-bold">Contact Me</h1>
           <div className="absolute bottom-0 p-6 w-full bg-white rounded-lg shadow-lg">
             <ContactInfo icon="📞" text="+2349060462206" />
             <ContactInfo icon="📧" text="miesieduoveria@gmail.com" />
