@@ -1,0 +1,27 @@
+{
+    "about": {
+      "title": "The Tale of Our Achievement Story",
+      "subtitle": "About Us",
+      "description": "Our achievement story is a testament to teamwork and perseverance. Together, we've overcome challenges, celebrated victories, and created a narrative of progress and success.",
+      "statistics": [
+        {
+          "title": "33+ Years",
+          "description": "Influencing Digital Landscapes Together"
+        },
+        {
+          "title": "125+ Projects",
+          "description": "Excellence Achieved Through Success"
+        },
+        {
+          "title": "26+ Awards",
+          "description": "Our Dedication to Innovation Wins Understanding"
+        },
+        {
+          "title": "99% Happy Clients",
+          "description": "Mirrors our Focus on Client Satisfaction."
+        }
+      ],
+      "buttonText": "Read More",
+      "imageUrl": "https://pagedone.io/asset/uploads/1717742431.png"
+    }
+  }

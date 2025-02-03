@@ -1,10 +1,17 @@
 "use client";
-import React from "react";
-import portfolioData from '@/app/components/constants/myskills.json'; // Adjust the path as necessary
+import React, { useEffect, useState } from "react";
 
 const PortfolioSection = () => {
+  const [portfolioData, setPortfolioData] = useState([]);
+
+  useEffect(() => {
+    import("@/app/components/constants/myskills.json")
+      .then((data) => setPortfolioData(data.default))
+      .catch((err) => console.error("Error loading JSON:", err));
+  }, []);
+
   return (
-    <section className="py-24 relative bg-black text-white">
+    <section id="projects" className="py-24 relative bg-black text-white">
       <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto">
         <div className="flex items-center justify-center flex-col gap-5 mb-14">
           <span className="bg-yellow-400 text-black text-xs font-medium px-3.5 py-1 rounded-full">
@@ -43,9 +50,11 @@ const PortfolioSection = () => {
             )
           ))}
         </div>
+        <a href="/projects">
         <button className="w-full rounded-lg py-4 px-6 text-center bg-yellow-400 text-lg font-medium text-black transition-all duration-300 hover:text-white hover:bg-yellow-500">
           Load More
         </button>
+        </a>
       </div>
     </section>
   );
