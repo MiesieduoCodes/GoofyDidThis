@@ -1,27 +1,27 @@
 {
-    "about": {
-      "title": "The Tale of Our Achievement Story",
-      "subtitle": "About Us",
-      "description": "Our achievement story is a testament to teamwork and perseverance. Together, we've overcome challenges, celebrated victories, and created a narrative of progress and success.",
-      "statistics": [
-        {
-          "title": "33+ Years",
-          "description": "Influencing Digital Landscapes Together"
-        },
-        {
-          "title": "125+ Projects",
-          "description": "Excellence Achieved Through Success"
-        },
-        {
-          "title": "26+ Awards",
-          "description": "Our Dedication to Innovation Wins Understanding"
-        },
-        {
-          "title": "99% Happy Clients",
-          "description": "Mirrors our Focus on Client Satisfaction."
-        }
-      ],
-      "buttonText": "Read More",
-      "imageUrl": "https://pagedone.io/asset/uploads/1717742431.png"
-    }
+  "about": {
+    "title": "Passion in Code, Games, and Nature",
+    "subtitle": "About Me",
+    "description": "I am a dedicated web and game developer with a love for crafting immersive digital experiences. Beyond the screen, I capture the beauty of the natural world through my lens, blending creativity and technology to tell compelling stories.",
+    "statistics": [
+      {
+        "title": "5+ Years",
+        "description": "Experience in Web & Game Development"
+      },
+      {
+        "title": "50+ Projects",
+        "description": "Bringing Ideas to Life with Code"
+      },
+      {
+        "title": "1000+ Photographs",
+        "description": "Exploring the World One Frame at a Time"
+      },
+      {
+        "title": "95% Client Satisfaction",
+        "description": "Delivering Quality and Innovation"
+      }
+    ],
+    "buttonText": "See My Work",
+    "imageUrl": "/public/images/IMG20240510165429.jpg"
   }
+}
