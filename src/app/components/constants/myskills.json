@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Game Development",
+    "description": "Creating immersive experiences through interactive storytelling and innovative gameplay mechanics.",
+    "imageUrl": "https://example.com/game-development.png",
+    "bgImage": "https://example.com/game-development-bg.png",
+    "isFeatured": true
+  },
+  {
+    "title": "Web Development",
+    "description": "Building responsive and user-friendly websites that enhance user engagement and accessibility.",
+    "imageUrl": "https://example.com/web-development.png",
+    "bgImage": "https://example.com/web-development-bg.png",
+    "isFeatured": true
+  },
+  {
+    "title": "Nature Photography",
+    "description": "Capturing the beauty of the natural world through stunning imagery and expert composition.",
+    "imageUrl": "https://example.com/nature-photography.png",
+    "bgImage": "https://example.com/nature-photography-bg.png",
+    "isFeatured": true
+  },
+  {
+    "title": "3D Game Assets",
+    "description": "Designing and modeling high-quality 3D assets for use in game development.",
+    "imageUrl": "https://example.com/3d-assets.png",
+    "bgImage": "",
+    "isFeatured": false
+  },
+  {
+    "title": "E-commerce Website",
+    "description": "Developing tailored online shopping experiences to drive sales and customer satisfaction.",
+    "imageUrl": "https://example.com/ecommerce-website.png",
+    "bgImage": "",
+    "isFeatured": false
+  },
+  {
+    "title": "Wildlife Photography",
+    "description": "Documenting the raw beauty of wildlife and their habitats through the lens.",
+    "imageUrl": "https://example.com/wildlife-photography.png",
+    "bgImage": "",
+    "isFeatured": false
+  }
+]
