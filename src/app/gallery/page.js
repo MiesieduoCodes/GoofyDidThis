@@ -1,65 +1,78 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import galleryData from "@/app/components/constants/gallery.json"; // Adjust path as needed
 
 const Gallery = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState("");
+  const [lightboxVisible, setLightboxVisible] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState("");
+  const galleryRef = useRef(null);
 
-  const images = [
-    "https://pagedone.io/asset/uploads/1713942989.png",
-    "https://pagedone.io/asset/uploads/1713943004.png",
-    "https://pagedone.io/asset/uploads/1713943024.png",
-    "https://pagedone.io/asset/uploads/1713943039.png",
-    "https://pagedone.io/asset/uploads/1713943054.png",
-    "https://pagedone.io/asset/uploads/1713943060.png",
-    "https://pagedone.io/asset/uploads/1713943070.png",
-    "https://pagedone.io/asset/uploads/1713943080.png",
-    "https://pagedone.io/asset/uploads/1713943090.png",
-  ];
+  useEffect(() => {
+    gsap.fromTo(
+      galleryRef.current.children,
+      { opacity: 0, rotateY: 90 },
+      { opacity: 1, rotateY: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
+    );
+  }, []);
 
   const openLightbox = (src) => {
-    setCurrentImage(src);
-    setIsOpen(true);
+    setLightboxImage(src);
+    setLightboxVisible(true);
   };
 
   const closeLightbox = () => {
-    setIsOpen(false);
-    setCurrentImage("");
+    setLightboxVisible(false);
+    setLightboxImage("");
   };
 
   return (
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-2.5 lg:pb-16 pb-10 text-center">
-          <h2 className="w-full text-gray-900 text-4xl font-bold leading-normal">
-            Our Gallery
-          </h2>
-          <div className="w-full text-gray-600 text-lg font-normal leading-8">
-            Step into a realm where art comes to life.
+        <div className="grid gap-2.5 lg:pb-16 pb-10">
+          <h2 className="w-full text-center text-gray-900 text-4xl font-bold font-manrope leading-normal">Gallery</h2>
+          <div className="w-full text-center text-gray-600 text-lg font-normal leading-8">Step into a realm where art comes to life.</div>
+        </div>
+        <div className="gallery grid gap-8">
+          <div className="flex flex-col mb-10">
+            <div className="grid md:grid-cols-12 gap-8 lg:mb-11 mb-7">
+              <div className="md:col-span-4 md:h-[404px] h-[277px] w-full rounded-3xl">
+                <img
+                  src={galleryData.images[0]}
+                  alt="Gallery image"
+                  className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-4 md:col-span-6 w-full h-full"
+                  onClick={() => openLightbox(galleryData.images[0])}
+                />
+              </div>
+              <div className="md:col-span-8 md:h-[404px] h-[277px] w-full rounded-3xl">
+                <img
+                  src={galleryData.images[1]}
+                  alt="Gallery image"
+                  className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-8 md:col-span-6 w-full h-full"
+                  onClick={() => openLightbox(galleryData.images[1])}
+                />
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
+              {galleryData.images.slice(2).map((src, index) => (
+                <div key={index} className="h-[277px] w-full rounded-3xl">
+                  <img
+                    src={src}
+                    alt={`Gallery image ${index + 3}`}
+                    className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto w-full h-full"
+                    onClick={() => openLightbox(src)}
+                  />
+                </div>
+
+              ))}
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {images.map((src, index) => (
-            <div key={index} className="h-[300px] rounded-3xl overflow-hidden group">
-              <img
-                src={src}
-                alt={`Gallery image ${index + 1}`}
-                className="gallery-image object-cover w-full h-full transition-transform duration-300 ease-in-out transform group-hover:scale-105 hover:grayscale"
-                onClick={() => openLightbox(src)}
-              />
-            </div>
-          ))}
-        </div>
-        {isOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-            <span className="text-white text-3xl absolute top-5 right-5 cursor-pointer" onClick={closeLightbox}>
-              &times;
-            </span>
-            <img
-              src={currentImage}
-              alt="Lightbox"
-              className="lightbox-image max-w-full max-h-full"
-            />
+
+        {lightboxVisible && (
+          <div className="lightbox fixed z-50 top-0 left-0 w-full h-full overflow-hidden bg-black bg-opacity-80 flex items-center justify-center">
+            <span className="close text-white text-3xl absolute top-5 right-5 cursor-pointer" onClick={closeLightbox}>&times;</span>
+            <img src={lightboxImage} alt="" className="lightbox-image max-w-full max-h-full" />
           </div>
         )}
       </div>

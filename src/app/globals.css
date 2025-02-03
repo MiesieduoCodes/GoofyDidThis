@@ -12,6 +12,32 @@ html {
   transition: 0.9s ease-in-out;
 }
 
+.hero-background {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url('/images/IMG_20241202_172514_556-modified.jpg'); /* Ensure this path is correct */
+  background-repeat: repeat;
+  background-size: 3000px 3000px; /* Adjust the size of the tiles */
+  z-index: -1; /* Keeps the background behind the content */
+}
+
+/* Optional: You can use CSS keyframes for finer control */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Custom keyframe animation if needed */
+@layer base {
+  .hero-background {
+    animation: moveBackground 4s linear infinite;
+  }
+}
 
 @layer base {
   :root {
