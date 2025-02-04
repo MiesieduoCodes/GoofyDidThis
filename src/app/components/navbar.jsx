@@ -6,8 +6,8 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Portfolio', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Portfolio', href: '/portfolio' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
@@ -62,20 +62,20 @@ export default function Navigation() {
         </div>
         {/* Social Icons Section */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-6">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+          <a href="https://www.linkedin.com/in/goofydidthis/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
             <FaLinkedin size={30} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+          <a href="https://github.com/MiesieduoCodes" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
             <FaGithub size={30} />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+          <a href="https://www.instagram.com/goofy_did_this/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
             <FaInstagram size={30} />
           </a>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-black/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-black/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Portfolio</span>

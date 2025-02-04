@@ -47,22 +47,22 @@ const Footer = () => {
               </h2>
               <ul className="text-white font-medium space-y-3">
                 <li>
-                  <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
+                  <a href="https://www.linkedin.com/in/goofydidthis/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
                     <FaLinkedin className="mr-2" /> LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
+                  <a href="https://github.com/MiesieduoCodes" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
                     <FaGithub className="mr-2" /> GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
+                  <a href="https://x.com/goofytakespics" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
                     <FaTwitter className="mr-2" /> Twitter
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
+                  <a href="https://instagram.com/goofy_did_this/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-yellow-400 transition">
                     <FaInstagram className="mr-2" /> Instagram
                   </a>
                 </li>
