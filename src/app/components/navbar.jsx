@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
@@ -14,10 +15,24 @@ const navigation = [
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+    <header className={`fixed inset-x-0 top-0 z-50 p-6 lg:px-8 transition-all duration-300 ${scrolled ? 'bg-yellow-500 text-black' : 'bg-transparent text-white'}`}>
+      <nav aria-label="Global" className="flex items-center justify-center lg:justify-between">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Portfolio</span>
@@ -40,14 +55,21 @@ export default function Navigation() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold text-white">
+            <a key={item.name} href={item.href} className="font-semibold text-lg">
               {item.name}
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold text-white">
-            Log in <span aria-hidden="true">&rarr;</span>
+        {/* Social Icons Section */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-6">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+            <FaLinkedin size={30} />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+            <FaGithub size={30} />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-yellow-500">
+            <FaInstagram size={30} />
           </a>
         </div>
       </nav>

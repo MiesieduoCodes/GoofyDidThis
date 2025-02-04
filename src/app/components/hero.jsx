@@ -11,17 +11,17 @@ export default function HeroSection() {
     // Background animation for the tiles
     gsap.to(".hero-background", {
       duration: 4, 
-      x: '100%', 
+      x: '50%',  // Reduced movement to prevent overflow
       repeat: -1, 
       ease: "linear", 
       backgroundPosition: '0% 0%', 
-      backgroundSize: 'auto 100%',
+      backgroundSize: 'cover',
     });
   }, []);
 
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="hero-background absolute inset-0 bg-repeat"></div>
+    <div className="relative isolate overflow-hidden px-6 pt-14 lg:px-8">
+      <div className="hero-background absolute inset-0 bg-cover"></div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
           <h1 className="hero-title text-5xl font-semibold tracking-tight text-white sm:text-7xl">
