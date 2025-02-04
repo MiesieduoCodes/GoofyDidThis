@@ -22,6 +22,10 @@
       }
     ],
     "buttonText": "See My Work",
-    "imageUrl": "/images/IMG_6959.JPG"
+    "images": [
+      "/images/IMG_6959.JPG",
+      "/images/IMG_6957.JPG",
+      "/images/IMG_20241031_114853_846.jpg"
+    ]
   }
 }
